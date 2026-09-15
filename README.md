@@ -2,9 +2,11 @@
 
 C++17과 Windows API로 작성한 파일 포장 도구다. `BinaryPacker.exe`에 파일을 드롭하면 원본 폴더에 `.sb` 파일을 만든다. SB는 Seok Binary의 약자다.
 
+[실행 파일 다운로드](https://github.com/Cocode96/BinaryPacker/releases/latest)
+
 ## 실행
 
-`dist/BinaryPacker.exe`를 실행하거나 파일 하나 또는 여러 개를 EXE 아이콘에 드롭한다. Python이나 Visual Studio 설치 없이 Windows x64에서 실행한다. C++ 런타임은 정적으로 링크한다.
+릴리즈의 `BinaryPacker-v1.1.0-win64.zip`을 내려받아 압축을 풀고 `BinaryPacker.exe`를 실행한다. 파일 하나 또는 여러 개를 EXE 아이콘에 드롭할 수 있다. Python이나 Visual Studio 설치 없이 Windows x64에서 실행한다. C++ 런타임은 정적으로 링크한다.
 
 ```text
 입력: C:\Assets\image.png
@@ -45,7 +47,9 @@ Visual Studio의 C++ 데스크톱 개발 도구, MSVC v143과 Windows SDK가 필
 | 버전별 패키지 | `dist/BinaryPacker-v1.1.0-win64.zip` |
 | 패키지 SHA-256 | `dist/SHA256SUMS.txt` |
 
-빌드 산출물은 Git에 포함하지 않는다. 이 버전은 Binary Packer 도구의 로컬 배포 버전이며, 저장소 전체 통합 패키지의 버전과는 별개다.
+빌드 산출물은 Git에 포함하지 않고 GitHub Releases에 배포한다. 소스와 실행 파일은 이 저장소에서 함께 버전을 관리한다.
+
+이 도구는 [Dev-Exploration-Lab](https://github.com/Cocode96/Dev-Exploration-Lab)의 `tools/sb-packer`에서 관련 커밋 이력을 보존해 분리했다.
 
 ## 검증
 
