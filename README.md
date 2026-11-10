@@ -1,8 +1,36 @@
-# Binary Packer v1.1.0
+<div align="center">
+
+# Binary Packer
+
+**파일을 드롭하면, 원본 옆에 SB 컨테이너 하나.**
+
+A small Windows file-packing tool built with C++17 and the Windows API.
+
+![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Windows x64](https://img.shields.io/badge/Windows-x64-0078D4?style=flat-square)
+[![Release](https://img.shields.io/github/v/release/Cocode96/BinaryPacker?style=flat-square&label=release)](https://github.com/Cocode96/BinaryPacker/releases/latest)
+
+[실행 파일 다운로드](https://github.com/Cocode96/BinaryPacker/releases/latest) · [빠른 시작](#실행) · [직접 빌드](#visual-studio에서-빌드) · [검증](#검증) · [SB 형식](#sb-형식-v1)
+
+</div>
+
+## 한눈에 보기
 
 C++17과 Windows API로 작성한 파일 포장 도구다. `BinaryPacker.exe`에 파일을 드롭하면 원본 폴더에 `.sb` 파일을 만든다. SB는 Seok Binary의 약자다.
 
-[실행 파일 다운로드](https://github.com/Cocode96/BinaryPacker/releases/latest)
+| 항목 | 내용 |
+|---|---|
+| 입력 | 파일 하나 또는 여러 개 |
+| 출력 | 파일명, 크기와 원본 바이트를 담은 SB v1 컨테이너 |
+| 원본 보존 | 원본을 수정하지 않고, 출력 이름이 겹치면 번호를 붙인다 |
+| 파일 처리 | 1 MiB 단위로 읽고, 실패한 파일 다음 입력도 계속 처리한다 |
+| 실행 환경 | Windows x64, Python·Visual Studio 설치 없이 실행 |
+| 기능 범위 | 복원·압축·암호화·엔진 전용 리소스 변환은 제공하지 않는다 |
+
+```text
+원본 파일  →  BinaryPacker.exe  →  원본 파일.sb
+                                  원본은 그대로 유지
+```
 
 ## 실행
 
